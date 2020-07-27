@@ -100,7 +100,7 @@ class CarriersConfiguration extends Component {
               </Typography>
             </Grid>
             <Grid item xs={2} md={2}>
-              <FormControl fullWidth>
+              <FormControl variant="outlined" margin="dense" fullWidth>
                 <InputLabel id="rfBandInputLabel">RF Band</InputLabel>
                 <Select
                   labelId="rfBand"

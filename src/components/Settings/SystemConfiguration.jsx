@@ -34,6 +34,10 @@ const styles = (theme) => ({
   gridLeftMargin: {
     marginLeft: theme.spacing(12),
   },
+  formControl: {
+    margin: theme.spacing(1),
+    // minWidth: 120,
+  },
 });
 
 const data = {
@@ -136,6 +140,8 @@ class SystemConfiguration extends Component {
               >
                 <Grid item>
                   <Field
+                    variant="outlined"
+                    margin="dense"
                     label="Network ID"
                     name="networkId"
                     as={TextField}
@@ -144,6 +150,8 @@ class SystemConfiguration extends Component {
                 </Grid>
                 <Grid item>
                   <Field
+                    variant="outlined"
+                    margin="dense"
                     label="SatProbe IP Address"
                     name="masterSatprobeIpAddress"
                     as={TextField}
@@ -171,13 +179,24 @@ class SystemConfiguration extends Component {
                 md={12}
                 spacing={2}
                 className={classes.contentGrid}
+                alignItems="center"
               >
                 <Grid item>
-                  <FormControl style={{ minWidth: 190 }}>
+                  <FormControl
+                    variant="outlined"
+                    margin="dense"
+                    style={{ minWidth: 190 }}
+                  >
                     <InputLabel id="localIpAddressTC1">
                       Local IP Address
                     </InputLabel>
-                    <Field name="localIpAddressTC1" type="select" as={Select}>
+                    <Field
+                      name="localIpAddressTC1"
+                      type="select"
+                      // variant="outlined"
+                      // margin="dense"
+                      as={Select}
+                    >
                       <MenuItem value={"192.168.31.100"}>
                         192.168.31.100
                       </MenuItem>
@@ -192,11 +211,15 @@ class SystemConfiguration extends Component {
                     label="Device IP Address"
                     name="deviceIpAddressTC1"
                     as={TextField}
+                    variant="outlined"
+                    margin="dense"
                     placeholder="Device IP Address"
                   />
                 </Grid>
                 <Grid item>
                   <Field
+                    variant="outlined"
+                    margin="dense"
                     label="Forwarding UDP Port"
                     name="forwardingUdpPortTC1"
                     as={TextField}
@@ -226,7 +249,11 @@ class SystemConfiguration extends Component {
                 className={classes.contentGrid}
               >
                 <Grid item>
-                  <FormControl style={{ minWidth: 190 }}>
+                  <FormControl
+                    variant="outlined"
+                    margin="dense"
+                    style={{ minWidth: 190 }}
+                  >
                     <InputLabel id="localIpAddressMrd">
                       Local IP Address
                     </InputLabel>
@@ -242,6 +269,8 @@ class SystemConfiguration extends Component {
                 </Grid>
                 <Grid item>
                   <Field
+                    variant="outlined"
+                    margin="dense"
                     label="Device IP Address"
                     name="deviceIpAddressMrd"
                     as={TextField}
@@ -250,6 +279,8 @@ class SystemConfiguration extends Component {
                 </Grid>
                 <Grid item>
                   <Field
+                    variant="outlined"
+                    margin="dense"
                     label="Forwarding UDP Port"
                     name="forwardingUdpPortMrd"
                     as={TextField}
@@ -279,7 +310,11 @@ class SystemConfiguration extends Component {
                 className={classes.contentGrid}
               >
                 <Grid item>
-                  <FormControl style={{ minWidth: 190 }}>
+                  <FormControl
+                    variant="outlined"
+                    margin="dense"
+                    style={{ minWidth: 190 }}
+                  >
                     <InputLabel id="localIpAddressNewtec">
                       Local IP Address
                     </InputLabel>
@@ -295,6 +330,8 @@ class SystemConfiguration extends Component {
                 </Grid>
                 <Grid item>
                   <Field
+                    variant="outlined"
+                    margin="dense"
                     label="Device IP Address"
                     name="deviceIpAddressNewtec"
                     as={TextField}
@@ -303,6 +340,8 @@ class SystemConfiguration extends Component {
                 </Grid>
                 <Grid item>
                   <Field
+                    variant="outlined"
+                    margin="dense"
                     label="Forwarding UDP Port"
                     name="forwardingUdpPortNewtec"
                     as={TextField}
@@ -332,7 +371,11 @@ class SystemConfiguration extends Component {
                 className={classes.contentGrid}
               >
                 <Grid item>
-                  <FormControl style={{ minWidth: 190 }}>
+                  <FormControl
+                    variant="outlined"
+                    margin="dense"
+                    style={{ minWidth: 190 }}
+                  >
                     <InputLabel id="localIpAddressTC1ProX">
                       Local IP Address
                     </InputLabel>
@@ -352,6 +395,8 @@ class SystemConfiguration extends Component {
                 </Grid>
                 <Grid item>
                   <Field
+                    variant="outlined"
+                    margin="dense"
                     label="Device IP Address"
                     name="deviceIpAddressTC1ProX"
                     as={TextField}
@@ -360,6 +405,8 @@ class SystemConfiguration extends Component {
                 </Grid>
                 <Grid item>
                   <Field
+                    variant="outlined"
+                    margin="dense"
                     label="Forwarding UDP Port"
                     name="forwardingUdpPortTC1ProX"
                     as={TextField}
@@ -368,6 +415,8 @@ class SystemConfiguration extends Component {
                 </Grid>
                 <Grid item>
                   <Field
+                    variant="outlined"
+                    margin="dense"
                     label="Channel"
                     name="channelTC1ProX"
                     as={TextField}
@@ -376,6 +425,8 @@ class SystemConfiguration extends Component {
                 </Grid>
                 <Grid item>
                   <Field
+                    variant="outlined"
+                    margin="dense"
                     label="RF Input"
                     name="rfInputTC1ProX"
                     as={TextField}
@@ -406,6 +457,8 @@ class SystemConfiguration extends Component {
               >
                 <Grid item>
                   <Field
+                    variant="outlined"
+                    margin="dense"
                     label="PSSR Center Frequency"
                     name="pssrCenterFrequency"
                     as={TextField}
@@ -414,6 +467,8 @@ class SystemConfiguration extends Component {
                 </Grid>
                 <Grid item>
                   <Field
+                    variant="outlined"
+                    margin="dense"
                     label="PSSR Sampling Rate"
                     name="pssrSamplingRate"
                     as={TextField}
@@ -422,6 +477,8 @@ class SystemConfiguration extends Component {
                 </Grid>
                 <Grid item>
                   <Field
+                    variant="outlined"
+                    margin="dense"
                     label="PSSR Gain"
                     name="pssrGain"
                     as={TextField}
@@ -429,7 +486,11 @@ class SystemConfiguration extends Component {
                   />
                 </Grid>
                 <Grid item>
-                  <FormControl style={{ minWidth: 190 }}>
+                  <FormControl
+                    variant="outlined"
+                    margin="dense"
+                    style={{ minWidth: 190 }}
+                  >
                     <InputLabel id="pssrClockReference">
                       External Clock Reference
                     </InputLabel>
@@ -462,7 +523,11 @@ class SystemConfiguration extends Component {
                 className={classes.contentGrid}
               >
                 <Grid item>
-                  <FormControl style={{ minWidth: 190 }}>
+                  <FormControl
+                    variant="outlined"
+                    margin="dense"
+                    style={{ minWidth: 190 }}
+                  >
                     <InputLabel id="controlIpAddressDecoder">
                       Local IP Address
                     </InputLabel>
@@ -482,6 +547,8 @@ class SystemConfiguration extends Component {
                 </Grid>
                 <Grid item>
                   <Field
+                    variant="outlined"
+                    margin="dense"
                     label="Control Port"
                     name="controlPort"
                     as={TextField}
@@ -513,8 +580,9 @@ class SystemConfiguration extends Component {
                 <Grid item container xs={12} md={12} spacing={2}>
                   <Grid item xs={2} md={2}>
                     <Field
+                      variant="outlined"
+                      margin="dense"
                       fullWidth
-                      // className={classes.textfieldWidth}
                       label="FL Source MAC Address"
                       name="flSourceMacAddress"
                       as={TextField}
@@ -523,6 +591,8 @@ class SystemConfiguration extends Component {
                   </Grid>
                   <Grid item xs={2} md={2}>
                     <Field
+                      variant="outlined"
+                      margin="dense"
                       fullWidth
                       // className={classes.textfieldWidth}
                       label="FL Destination MAC Address"
@@ -533,6 +603,8 @@ class SystemConfiguration extends Component {
                   </Grid>
                   <Grid item xs={2} md={2}>
                     <Field
+                      variant="outlined"
+                      margin="dense"
                       // className={classes.textfieldWidth}
                       fullWidth
                       label="RL Source MAC Address"
@@ -543,6 +615,8 @@ class SystemConfiguration extends Component {
                   </Grid>
                   <Grid item xs={2} md={2}>
                     <Field
+                      variant="outlined"
+                      margin="dense"
                       // className={classes.textfieldWidth}
                       fullWidth
                       label="RL Destination MAC Address"
@@ -573,7 +647,7 @@ class SystemConfiguration extends Component {
                     />
                   </Grid>
                   <Grid item xs={2} md={2}>
-                    <FormControl fullWidth>
+                    <FormControl variant="outlined" margin="dense" fullWidth>
                       <InputLabel id="ipForwardingInterface">
                         IP Forwarding Interface
                       </InputLabel>
@@ -593,6 +667,8 @@ class SystemConfiguration extends Component {
                   </Grid>
                   <Grid item xs={2} md={2}>
                     <Field
+                      variant="outlined"
+                      margin="dense"
                       fullWidth
                       label="Forwarding Delay"
                       name="forwardingDelay"
@@ -619,6 +695,8 @@ class SystemConfiguration extends Component {
                   </Grid>
                   <Grid item xs={2} md={2}>
                     <Field
+                      variant="outlined"
+                      margin="dense"
                       fullWidth
                       label="IP Storage Path"
                       name="ipStoragePath"
@@ -628,6 +706,8 @@ class SystemConfiguration extends Component {
                   </Grid>
                   <Grid item xs={2} md={2}>
                     <Field
+                      variant="outlined"
+                      margin="dense"
                       fullWidth
                       label="File Split Value"
                       name="fileSplitValue"
@@ -636,7 +716,7 @@ class SystemConfiguration extends Component {
                     />
                   </Grid>
                   <Grid item xs={2} md={2}>
-                    <FormControl fullWidth>
+                    <FormControl variant="outlined" margin="dense" fullWidth>
                       <InputLabel id="fileSplitType">
                         File Split Type
                       </InputLabel>
@@ -670,6 +750,8 @@ class SystemConfiguration extends Component {
                   </Grid>
                   <Grid item xs={2} md={2}>
                     <Field
+                      variant="outlined"
+                      margin="dense"
                       fullWidth
                       label="Secondary Path"
                       name="secondaryPath"
@@ -679,6 +761,8 @@ class SystemConfiguration extends Component {
                   </Grid>
                   <Grid item xs={2} md={2}>
                     <Field
+                      variant="outlined"
+                      margin="dense"
                       fullWidth
                       label="File Prefix"
                       name="filePrefix"
@@ -709,6 +793,8 @@ class SystemConfiguration extends Component {
                   </Grid>
                   <Grid item xs={2} md={2}>
                     <Field
+                      variant="outlined"
+                      margin="dense"
                       fullWidth
                       label="Files per Folder"
                       name="filesPerFolder"
@@ -718,6 +804,8 @@ class SystemConfiguration extends Component {
                   </Grid>
                   <Grid item xs={2} md={2}>
                     <Field
+                      variant="outlined"
+                      margin="dense"
                       fullWidth
                       label="Free Space Threshold(%)"
                       name="freeSpaceThreshold"
@@ -773,6 +861,8 @@ class SystemConfiguration extends Component {
                   </Grid>
                   <Grid item>
                     <Field
+                      variant="outlined"
+                      margin="dense"
                       label="Debug Trace Level"
                       name="debugTraceLevel"
                       as={TextField}

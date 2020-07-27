@@ -38,7 +38,7 @@ const FLModeConfiguration = (params) => {
       className={classes.contentGrid}
     >
       <Grid item xs={2} md={2}>
-        <FormControl fullWidth>
+        <FormControl variant="outlined" margin="dense" fullWidth>
           <InputLabel id="lnbFrequencyInputLabel">
             LNB Conversion Frequency
           </InputLabel>
@@ -55,6 +55,8 @@ const FLModeConfiguration = (params) => {
       </Grid>
       <Grid item xs={2} md={2}>
         <TextField
+          variant="outlined"
+          margin="dense"
           fullWidth
           id="satelliteConversionFrequency"
           name="satelliteConversionFrequency"

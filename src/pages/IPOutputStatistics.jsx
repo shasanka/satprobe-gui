@@ -1,12 +1,26 @@
 import React, { Component } from "react";
-import { Typography } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 
-export class IPOutputStatistics extends Component {
+import IPPacketsStats from "../components/IPOutputStatistics/IPPacketsStats";
+import IPPacketsForwardStats from "../components/IPOutputStatistics/IPPacketsForwardStats";
+import IPPacketsStorageStats from "../components/IPOutputStatistics/IPPacketsStorageStats";
+
+class IPOutputStatistics extends Component {
   render() {
     return (
-      <div>
-        <Typography paragraph>Ip Output Statistics </Typography>
-      </div>
+      <React.Fragment>
+        <Grid container spacing={2}>
+          <Grid item xs={12} md={12}>
+            <IPPacketsStats />
+          </Grid>
+          <Grid item xs={12} md={12}>
+            <IPPacketsForwardStats />
+          </Grid>
+          <Grid item xs={12} md={12}>
+            <IPPacketsStorageStats />
+          </Grid>
+        </Grid>
+      </React.Fragment>
     );
   }
 }

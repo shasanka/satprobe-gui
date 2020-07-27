@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Tabs, Tab } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
-import TabPanel from "../components/Settings/TabPanel";
+import TabPanel from "../components/commonComponents/TabPanel";
 import SystemConfiguration from "../components/Settings/SystemConfiguration";
 import CarriersConfiguration from "../components/Settings/CarriersConfiguration";
 
