@@ -36,7 +36,9 @@ const styles = (theme) => ({
   },
   formControl: {
     margin: theme.spacing(1),
-    // minWidth: 120,
+  },
+  secondaryColor: {
+    color: theme.palette.primary.light,
   },
 });
 
@@ -161,6 +163,7 @@ class SystemConfiguration extends Component {
                 </Grid>
                 <Grid item>
                   <FormControl
+                    // fullWidth
                     variant="outlined"
                     margin="dense"
                     style={{ minWidth: 190 }}
@@ -653,6 +656,8 @@ class SystemConfiguration extends Component {
                     <FormControlLabel
                       control={
                         <Field
+                          color="secondary"
+                          // className={classes.secondaryColor}
                           as={Switch}
                           type="checkbox"
                           name="ipForwardingEnabled"
@@ -703,7 +708,12 @@ class SystemConfiguration extends Component {
                   <Grid item xs={2} md={2}>
                     <FormControlLabel
                       control={
-                        <Field as={Switch} type="checkbox" name="ipStorage" />
+                        <Field
+                          color="secondary"
+                          as={Switch}
+                          type="checkbox"
+                          name="ipStorage"
+                        />
                       }
                       label="IP Storage"
                     />
@@ -755,6 +765,7 @@ class SystemConfiguration extends Component {
                     <FormControlLabel
                       control={
                         <Field
+                          color="secondary"
                           as={Switch}
                           type="checkbox"
                           name="seperateFLRLIpPackets"
@@ -798,6 +809,7 @@ class SystemConfiguration extends Component {
                     <FormControlLabel
                       control={
                         <Field
+                          color="secondary"
                           as={Switch}
                           type="checkbox"
                           name="saveInSubFolders"
@@ -857,6 +869,7 @@ class SystemConfiguration extends Component {
                       style={{ minWidth: 190 }}
                       control={
                         <Field
+                          color="secondary"
                           as={Switch}
                           type="checkbox"
                           name="emulatorMode"
@@ -869,7 +882,12 @@ class SystemConfiguration extends Component {
                     <FormControlLabel
                       style={{ minWidth: 190 }}
                       control={
-                        <Field as={Switch} type="checkbox" name="debugMode" />
+                        <Field
+                          color="secondary"
+                          as={Switch}
+                          type="checkbox"
+                          name="debugMode"
+                        />
                       }
                       label="Debug Mode"
                     />
@@ -891,6 +909,7 @@ class SystemConfiguration extends Component {
                       style={{ minWidth: 190 }}
                       control={
                         <Field
+                          color="secondary"
                           as={Switch}
                           type="checkbox"
                           name="nodeStatistics"
@@ -904,6 +923,7 @@ class SystemConfiguration extends Component {
                       style={{ minWidth: 190 }}
                       control={
                         <Field
+                          color="secondary"
                           as={Switch}
                           type="checkbox"
                           name="saveHexFiles"
@@ -917,6 +937,7 @@ class SystemConfiguration extends Component {
                       style={{ minWidth: 190 }}
                       control={
                         <Field
+                          color="secondary"
                           as={Switch}
                           type="checkbox"
                           name="disableIpAssembly"
@@ -930,6 +951,7 @@ class SystemConfiguration extends Component {
                   <Grid item container xs={6} md={6} spacing={2}>
                     <Grid item>
                       <Button
+                        size="small"
                         variant="contained"
                         color="primary"
                         onClick={this.handleAdvanceSettingsClick}
@@ -939,6 +961,7 @@ class SystemConfiguration extends Component {
                     </Grid>
                     <Grid item>
                       <Button
+                        size="small"
                         variant="contained"
                         color="primary"
                         onClick={this.handleDeviceInformationClick}
@@ -950,16 +973,22 @@ class SystemConfiguration extends Component {
                   <Grid item container xs={6} md={6} spacing={2}>
                     <Grid item>
                       <Button
+                        size="small"
+                        variant="contained"
+                        color="primary"
+                        type="submit"
+                      >
+                        Set System Configuration
+                      </Button>
+                    </Grid>
+                    <Grid item>
+                      <Button
+                        size="small"
                         variant="contained"
                         color="primary"
                         onClick={this.handleCancel}
                       >
                         Cancel
-                      </Button>
-                    </Grid>
-                    <Grid item>
-                      <Button variant="contained" color="primary" type="submit">
-                        Set System Configuration
                       </Button>
                     </Grid>
                   </Grid>

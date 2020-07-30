@@ -1,5 +1,5 @@
 import React from "react";
-import MaterialTable from "material-table";
+import CustomMaterialTable from "../commonComponents/CustomMaterialTable";
 import { Grid, Toolbar, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import StopIcon from "@material-ui/icons/Stop";
@@ -32,29 +32,7 @@ const TerminalStatistics = (props) => {
           </Toolbar>
         </Grid>
         <Grid item xs={12} md={12} style={{ width: "100%" }}>
-          <div style={{ maxWidth: "100%" }}>
-            <MaterialTable
-              columns={[
-                { title: "Adı", field: "name" },
-                { title: "Soyadı", field: "surname" },
-                { title: "Doğum Yılı", field: "birthYear", type: "numeric" },
-                {
-                  title: "Doğum Yeri",
-                  field: "birthCity",
-                  lookup: { 34: "İstanbul", 63: "Şanlıurfa" },
-                },
-              ]}
-              data={[
-                {
-                  name: "Mehmet",
-                  surname: "Baran",
-                  birthYear: 1987,
-                  birthCity: 63,
-                },
-              ]}
-              title="Demo Title"
-            />
-          </div>
+          <CustomMaterialTable />
         </Grid>
       </Grid>
     </React.Fragment>

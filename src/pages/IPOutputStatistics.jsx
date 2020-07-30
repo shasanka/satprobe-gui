@@ -9,7 +9,7 @@ class IPOutputStatistics extends Component {
   render() {
     return (
       <React.Fragment>
-        <Grid container spacing={2}>
+        <Grid container spacing={4}>
           <Grid item xs={12} md={12}>
             <IPPacketsStats />
           </Grid>

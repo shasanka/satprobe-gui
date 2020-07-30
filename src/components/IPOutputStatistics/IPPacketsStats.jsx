@@ -2,6 +2,8 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Toolbar, Typography } from "@material-ui/core";
 import StopIcon from "@material-ui/icons/Stop";
+import DataDisplayGrid from "../commonComponents/DataDisplayGrid";
+import { ipPacketStats } from "../../dummydata/ipOutputStatsData";
 
 const useStyles = makeStyles((theme) => ({
   toolbarIcon: {
@@ -29,11 +31,8 @@ const IPPacketsStats = (props) => {
             </Typography>
           </Toolbar>
         </Grid>
-        <Grid item xs={12} md={12} className={classes.contentGrid}>
-          <Typography variant="body2">FL IP Packets :</Typography>
-        </Grid>
-        <Grid item xs={12} md={12} className={classes.contentGrid}>
-          <Typography variant="body2">RL IP Packets :</Typography>
+        <Grid item xs={6} md={6} className={classes.contentGrid}>
+          <DataDisplayGrid data={ipPacketStats} />
         </Grid>
       </Grid>
     </React.Fragment>
