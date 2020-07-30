@@ -43,6 +43,7 @@ const styles = (theme) => ({
 const data = {
   networkId: "",
   masterSatprobeIpAddress: "",
+  theme: "dark",
   color: "Red",
   localIpAddressTC1: "",
   deviceIpAddressTC1: "",
@@ -157,6 +158,19 @@ class SystemConfiguration extends Component {
                     as={TextField}
                     placeholder="SatProbe IP Address"
                   />
+                </Grid>
+                <Grid item>
+                  <FormControl
+                    variant="outlined"
+                    margin="dense"
+                    style={{ minWidth: 190 }}
+                  >
+                    <InputLabel id="theme">Theme</InputLabel>
+                    <Field name="theme" type="select" as={Select}>
+                      <MenuItem value={"dark"}>Dark</MenuItem>
+                      <MenuItem value={"light"}>Light</MenuItem>
+                    </Field>
+                  </FormControl>
                 </Grid>
               </Grid>
 

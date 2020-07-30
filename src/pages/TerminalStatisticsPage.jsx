@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Tabs, Tab } from "@material-ui/core";
-import { withStyles } from "@material-ui/core/styles";
 import TabPanel from "../components/commonComponents/TabPanel";
-import SystemConfiguration from "../components/Settings/SystemConfiguration";
-import CarriersConfiguration from "../components/Settings/CarriersConfiguration";
+import TerminalStatistics from "../components/TerminalStatistics/TerminalStatistics";
+import MobileTerminalStatistics from "../components/TerminalStatistics/MobileTerminalStatistics";
+import { withStyles } from "@material-ui/core/styles";
 
 const styles = (theme) => ({
   root: {
@@ -11,7 +11,8 @@ const styles = (theme) => ({
     backgroundColor: theme.palette.background.paper,
   },
 });
-class Settings extends Component {
+
+export class TerminalStatisticsPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -22,11 +23,11 @@ class Settings extends Component {
   handleChange = (event, newValue) => {
     this.setState({ value: newValue });
   };
+
   render() {
-    const classes = this.props;
     const { value } = this.state;
     return (
-      <div className={classes.root}>
+      <div>
         <Tabs
           value={value}
           indicatorColor="primary"
@@ -35,18 +36,18 @@ class Settings extends Component {
           onChange={this.handleChange}
           aria-label="disabled tabs example"
         >
-          <Tab label="System Configuration" />
-          <Tab label="Carriers Configuration" />
+          <Tab label="Terminal Statistics" />
+          <Tab label="Mobile Terminal Statistics" />
         </Tabs>
         <TabPanel value={value} index={0}>
-          <SystemConfiguration />
+          <TerminalStatistics />
         </TabPanel>
         <TabPanel value={value} index={1}>
-          <CarriersConfiguration />
+          <MobileTerminalStatistics />
         </TabPanel>
       </div>
     );
   }
 }
 
-export default withStyles(styles, { withTheme: true })(Settings);
+export default withStyles(styles, { withTheme: true })(TerminalStatisticsPage);

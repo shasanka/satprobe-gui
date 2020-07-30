@@ -1,7 +1,7 @@
 import MailIcon from "@material-ui/icons/Mail";
 import DecoderStatistics from "../pages/DecoderStatistics";
-import CarrierStatistics from "../pages/CarrierStatistics";
-import TerminalStatistics from "../pages/TerminalStatistics";
+import CarrierStatisticsPage from "../pages/CarrierStatisticsPage";
+import TerminalStatisticsPage from "../pages/TerminalStatisticsPage";
 import IPOutputStatistics from "../pages/IPOutputStatistics";
 import Settings from "../pages/Settings";
 import BuildRoundedIcon from "@material-ui/icons/BuildRounded";
@@ -19,14 +19,14 @@ const Routes = [
     sidebarName: "Carrier Statistics",
     navbarName: "Carrier Statistics",
     icon: MailIcon,
-    component: CarrierStatistics,
+    component: CarrierStatisticsPage,
   },
   {
     path: "/TerminalStatistics",
     sidebarName: "Terminal Statistics",
     navbarName: "TerminalStatistics",
     icon: MailIcon,
-    component: TerminalStatistics,
+    component: TerminalStatisticsPage,
   },
   {
     path: "/IPOutputStatistics",
