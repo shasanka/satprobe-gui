@@ -1,5 +1,5 @@
 import MailIcon from "@material-ui/icons/Mail";
-import DecoderStatistics from "../pages/DecoderStatistics";
+import DecoderStatisticsPage from "../pages/DecoderStatisticsPage";
 import CarrierStatisticsPage from "../pages/CarrierStatisticsPage";
 import TerminalStatisticsPage from "../pages/TerminalStatisticsPage";
 import IPOutputStatistics from "../pages/IPOutputStatistics";
@@ -12,7 +12,7 @@ const Routes = [
     sidebarName: "Decoder Statistics",
     navbarName: "Decoder Statistics",
     icon: MailIcon,
-    component: DecoderStatistics,
+    component: DecoderStatisticsPage,
   },
   {
     path: "/CarrierStatistics",

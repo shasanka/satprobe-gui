@@ -503,6 +503,7 @@ class SystemConfiguration extends Component {
                   <FormControl
                     variant="outlined"
                     margin="dense"
+                    fullWidth
                     style={{ minWidth: 190 }}
                   >
                     <InputLabel id="pssrClockReference">
