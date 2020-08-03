@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   contentGrid: {
-    marginLeft: theme.spacing(6),
+    // marginLeft: theme.spacing(6),
   },
 }));
 

@@ -32,7 +32,7 @@ const Decoders = (props) => {
             </Typography>
           </Toolbar>
         </Grid>
-        <Grid item xs={12} md={12}>
+        <Grid item xs={6} md={6}>
           <DataDisplayGrid data={jobStats} />
         </Grid>
         <Grid item xs={12} md={12}>
@@ -47,7 +47,7 @@ const Decoders = (props) => {
             </Typography>
           </Toolbar>
         </Grid>
-        <Grid item xs={12} md={12}>
+        <Grid item xs={6} md={6}>
           <DataDisplayGrid data={decoderStats} />
         </Grid>
         <Grid item xs={12} md={12}>

@@ -26,7 +26,7 @@ const styles = (theme) => ({
     flexGrow: 1,
   },
   contentGrid: {
-    marginLeft: theme.spacing(3),
+    // paddingLeft: theme.spacing(3), // ADDING THIS STYLE ADDS HORIZONTAL SCROLL BAR
   },
   textfieldWidth: {
     minWidth: 400,

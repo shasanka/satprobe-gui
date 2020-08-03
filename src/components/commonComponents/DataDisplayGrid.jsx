@@ -11,7 +11,7 @@ const DataDisplayGrid = (props) => {
           const key = Object.keys(data);
           const value = Object.values(data);
           return (
-            <Grid item xs={3} md={3} key={index}>
+            <Grid item xs={2} md={2} key={index}>
               <DataDisplayField _key={key} _value={value} />
             </Grid>
           );

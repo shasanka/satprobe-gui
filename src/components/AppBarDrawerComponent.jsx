@@ -22,7 +22,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import Routes from "../utils/Routes";
-import { Link, withRouter, Switch, Route } from "react-router-dom";
+import { Link, withRouter, Switch, Route, NavLink } from "react-router-dom";
 
 const drawerWidth = 240;
 
@@ -189,14 +189,21 @@ class AppBarDrawerComponent extends Component {
           <MenuList>
             {Routes.map((prop, key) => {
               return (
-                <Link to={prop.path} key={key}>
+                <Link
+                  to={prop.path}
+                  key={key}
+                  style={{ textDecoration: "none", color: "white" }}
+                  // activeStyle={{
+                  //   fontWeight: "bold",
+                  //   color: "black",
+                  //   // textDecoration: "none",
+                  // }}
+                >
                   <MenuItem selected={this.activeRoute(prop.path)}>
                     <ListItemIcon>
                       <prop.icon />
                     </ListItemIcon>
-                    <ListItemText style={{ color: "white" }}>
-                      {prop.sidebarName}
-                    </ListItemText>
+                    <ListItemText>{prop.sidebarName}</ListItemText>
                   </MenuItem>
                 </Link>
               );
