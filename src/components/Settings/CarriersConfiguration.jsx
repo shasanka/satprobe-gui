@@ -38,7 +38,7 @@ class CarriersConfiguration extends Component {
       rfBand: "ku",
     };
   }
-  //feature test
+  //feature testsdgvsdgsad
   handleModeChange = () => {
     this.setState(
       (prevState) => ({
